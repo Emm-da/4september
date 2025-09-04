@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя домашняя страница</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: #4a86e8;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 15px;
+            background-color: #3a76d8;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+        }
+        
+        nav ul li a:hover {
+            background-color: #2d66c4;
+            border-radius: 3px;
+        }
+        
+        /* Основное содержимое */
+        .main-content {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            color: #2d66c4;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        /* Изображения */
+        .image-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* Таблица */
+        .table-section {
+            margin: 30px 0;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #4a86e8;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* Футер */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        
+        .copyright {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка с меню -->
+    <header>
+        <div class="container">
+            <h1>Добро пожаловать на мой сайт</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Мои работы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <div class="container">
+        <div class="main-content">
+            <h2>Обо мне</h2>
+            <p>Привет! Меня зовут Алексей, и я начинающий веб-разработчик. Это моя первая домашняя страница, созданная с использованием HTML и CSS.</p>
+            <p>Я учусь создавать веб-сайты и применяю на практике полученные знания. В будущем я планирую развивать свои навыки и стать профессиональным разработчиком.</p>
+            
+            <div class="image-section">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Программирование">
+                <p class="image-caption">Программирование - это интересно!</p>
+            </div>
+            
+            <h2>Мои навыки</h2>
+            <p>На текущий момент я изучил основы следующих технологий:</p>
+            
+            <div class="table-section">
+                <table>
+                    <tr>
+                        <th>Технология</th>
+                        <th>Уровень владения</th>
+                        <th>Применение</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Средний</td>
+                        <td>Создание структуры веб-страниц</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Средний</td>
+                        <td>Стилизация и оформление страниц</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Начальный</td>
+                        <td>Добавление интерактивности</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h2>Мои цели</h2>
+            <p>В ближайшем будущем я планирую изучить следующие технологии:</p>
+            <ul>
+                <li>Продвинутый CSS (Flexbox, Grid)</li>
+                <li>JavaScript и фреймворки (React, Vue)</li>
+                <li>Backend-разработку (Node.js, PHP)</li>
+                <li>Работу с базами данных</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <p>Email: example@mail.ru | Телефон: +7 (123) 456-78-90</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Моя домашняя страница. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

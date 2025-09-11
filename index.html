@@ -508,6 +508,58 @@
                 }
             });
         });
+	// Обработчик для формы обратной связи
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Предотвращаем стандартную отправку
+        
+        // Валидация формы
+        if (this.checkValidity()) {
+            // Создаем FormData объект
+            const formData = new FormData(this);
+            
+            // Отправляем данные (замените на ваш реальный endpoint)
+            fetch('https://httpbin.org/post', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Успешно отправлено:', data);
+                alert('Форма успешно отправлена!');
+                this.reset(); // Очищаем форму
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                alert('Произошла ошибка при отправке формы');
+            });
+        } else {
+            alert('Пожалуйста, заполните все обязательные поля правильно');
+        }
+    });
+	// Обработчик для формы аутентификации
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Предотвращаем стандартную отправку
+        
+        if (this.checkValidity()) {
+            const formData = new FormData(this);
+            
+            fetch('https://httpbin.org/post', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Успешный вход:', data);
+                alert('Вход выполнен успешно!');
+                document.getElementById('auth-bg').style.display = 'none';
+                this.reset();
+            })
+            .catch(error => {
+                console.error('Ошибка входа:', error);
+                alert('Ошибка при входе');
+            });
+        }
+    });
     </script>
 </body>
 </html>
